@@ -1,0 +1,91 @@
+*{
+    box-sizing: border-box;
+}
+
+html,body{
+    margin: 0;
+    background-color: #777;
+    color: black;
+}
+
+.main-header h1{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -35px;
+}
+
+.guess-grid{
+    position: relative;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    flex-grow: 1;
+    grid-template-columns: repeat(5, 4em);
+    grid-template-rows: repeat(6, 4em);
+    gap: .25em;
+    color: rgb(0, 0, 0);
+}
+
+.guess-grid .img img{
+    position: absolute;
+    height: 350px;
+}
+
+.guess-placeholder{
+    display: flex;
+    justify-content: center;
+}
+
+.guess-placeholder h1{
+    font-size: 2em;
+    width: 25px;
+    text-align: center;
+    padding: 0 3%;
+}
+
+.keyboard{
+    margin: 0 8%;
+    user-select: none;
+}
+
+.keyboard .row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: .25em;
+    margin-top: .1em;
+}
+
+.keyboard .row button{
+    text-transform: uppercase;
+    background-color: rgb(49, 49, 49);
+    color: white;
+    border: 1px solid black;
+    margin: 0;
+    padding: 0 1%;
+    width: 3em;
+    height: 3em;
+}
+
+.keyboard .row button:hover{
+    background-color: rgb(65, 64, 64);
+}
+
+.keyboard .row button:active{
+    background-color: rgb(104, 104, 104);
+}
+
+.wrong{
+    background-color: rgb(255, 0, 0) !important;
+    color: black !important;
+}
+
+.right{
+    background-color: chartreuse !important;
+    color: black !important;
+}
+
+.hidden{
+    display: none;
+}
